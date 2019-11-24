@@ -11,5 +11,10 @@
     "url": "github.com/gedgarbrown/cs313workforceschedule"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "pg": "^7.14.0"
+  }
 }
