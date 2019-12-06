@@ -13,12 +13,16 @@
 	<H1>Workforce Schedule</h1>
 	<hr><hr>
 	<form method = "post" action="/employees">
-	<input type="submit" value="List Employees"><br><br>
+		<input type="submit" value="List Employees"><br><br>
 	</form>
 	<form method = "post" action="/schedule_date">
-	<input type="submit" value="View Schedule">&nbsp &nbsp &nbsp 
-	<input type="date" name="date">
-	<br><br>
+		<input type="submit" value="View Schedule">&nbsp &nbsp &nbsp 
+		<input type="date" name="date">
+		<br><br>
+	</form>
+	<form method = "get" action="/newemployee">
+		<input type="submit" value="Create New Employee">&nbsp &nbsp &nbsp 
+		<br><br>
 	</form>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width">
+
+
+<title>Workforce Schedule</title>
+</head>
+
+<body>	
+	<H1>Create a New Employee:</h1>
+	<hr><hr>
+	
+	<%- data.newcreated %>
+	
+	<form method = "post" action="/createemployee">
+		First Name:<input type="text" name="name_first"><br>
+		Last Name:<input type="text" name="name_last"><br>
+		Username:<input type="text" name="username"><br>
+		Password:<input type="text" name="pswd"><br>
+		Confirm Password: <input type="text" name="cpswd"><br>
+		Standard Hours: <input type="number" name="hours"><br>
+		Skills:<br>
+		&nbsp; &nbsp; <input type="checkbox" name="server" value="t">Server<br>
+		&nbsp; &nbsp; <input type="checkbox" name="host" value="t">Host<br>
+		&nbsp; &nbsp; <input type="checkbox" name="kitchen" value="t">Kitchen<br>
+		&nbsp; &nbsp; <input type="checkbox" name="cleanup" value="t">Cleanup<br>
+		&nbsp; &nbsp; <input type="checkbox" name="manager" value="t">Manager<br>
+		
+		<input type="submit" value="Add New Employee">
+	</form>
+	
+</body>
+</html>
