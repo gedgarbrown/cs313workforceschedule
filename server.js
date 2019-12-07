@@ -105,11 +105,14 @@ function setNewEmployee(req, res, next) {
 	var manager = setTFforSkill(req.body.manager);
 	var hours = req.body.hours;
 	
+	const sql = {
+		text: 'INSERT INTO employees(name_first, name_last, username, password, server, host, kitchen, cleanup, manager, hours) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)',
+		values: [name_first, name_last, username, pswd, server, host, kitchen, cleanup, manager, hours],
+	};
 	
-	
-	var sql = "INSERT INTO employees(name_first, name_last, username, password, server, host, kitchen, cleanup, manager, hours)" +
-		"VALUES ('" + name_first + "', '" + name_last + "', '" + username + "', '" + pswd + "', '" + server +"', '" +
-		host + "', '" + kitchen + "', '" + cleanup + "','" + manager + "', '" + hours + "')";
+	//var sql = "INSERT INTO employees(name_first, name_last, username, password, server, host, kitchen, cleanup, manager, hours)" +
+	//	"VALUES ('" + name_first + "', '" + name_last + "', '" + username + "', '" + pswd + "', '" + server +"', '" +
+	//	host + "', '" + kitchen + "', '" + cleanup + "','" + manager + "', '" + hours + "')";
 		
 	//console.log(date);
 	console.log(sql);
