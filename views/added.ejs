@@ -9,8 +9,8 @@
 <title>Workforce Schedule</title>
 </head>
 
-<body>	
-
+<body>
+		
 	<div id="mySidenav" class="sidenav">
 		<span class="sidetext">
 			<form method ="get" action="/logout">
@@ -22,14 +22,27 @@
 			</form>
 		</span>
 	</div>	
-	<div id="main" class="main">
-		
+		<div id="main" class="main">
+	
 			<H1>Workforce Schedule</h1>
 		
-		<hr><hr>
-		<div id="content" class="content">
-			<%- data.response %>
+			<div id="content" class="content">
+			<br><br>
+			Name Added
+			<br><br>
+			<form method ="get" action="/">
+				<input type="submit" value ="Return to Menu">
+			</form>
+			
+			<form method = "post" action="/schedule_date">
+				<input type="submit" value="View Schedule">&nbsp &nbsp &nbsp 
+				<input type="date" name="date">
+				<br><br>
+			</form>
+			
+			</div>
 		</div>
-	</div>
+		
+		
 </body>
 </html>

@@ -4,20 +4,80 @@
 <head>
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width">
-
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 
 <title>Workforce Schedule</title>
 </head>
 
-<body>	
-	<H1>Workforce Schedule</h1>
-	<hr><hr>
-	<h3>Schedule for: <%= data.date%></h3>
-	<br> 
-	<br>
-	Opening<br>
-	10:00 AM 
-	<%- data.response %>
+<body>
+		
+	<div id="mySidenav" class="sidenav">
+		<span class="sidetext">
+			<form method ="get" action="/logout">
+				<input type="submit" value ="Logout">
+			</form>
+			<br>
+			<form method ="get" action="/">
+				<input type="submit" value ="Home">
+			</form>
+		</span>
+	</div>	
+		<div id="main" class="main">
 	
+			<H1>Workforce Schedule</h1>
+		
+			<div id="content" class="content">
+				<hr><hr>
+				<h3>Schedule for: <%= data.date%></h3>
+				<br> 
+				<br>
+				<table> 
+					<tr>
+						<th>Servers</th>
+						<th>Hosts</th>
+						<th>Kitchen</th>
+						<th>Cleanup</th>
+						<th>Managers</th>
+					</tr>
+					<form method="post" action="/removename">
+					<tr>
+						<td><%- data.servers %></td>
+						<td><%- data.hosts %></td>
+						<td><%- data.kitchen %></td>
+						<td><%- data.cleanup %></td>
+						<td><%- data.managers %></td>	
+					</tr>
+					<tr>
+					Remove Selected Names from Shift: <input type="submit" value="Remove">
+					</tr>
+					</form>
+					<tr> 
+						
+					</tr>
+				
+				</table>
+				
+				<form method="post" action="/addname">
+						<select name="employee">
+							<%- data.employees %>
+							
+						</select>
+						
+						<select name="code">
+							<option value = "0">Server</option>
+							<option value = "1">Host</option>
+							<option value = "2">Kitchen</option>
+							<option value = "3">Cleanup</option>
+							<option value = "4">Manager</option>
+						</select>
+						<input type="submit" value="Add Employee">
+						
+						</form>
+				<br><br>
+				
+			</div>
+		</div>
+		
+		
 </body>
 </html>
