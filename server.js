@@ -7,7 +7,7 @@ const path = require('path');
 var sess;
 app.set('view engine','ejs');
 
-
+// comment
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded());
 app.use(session({
