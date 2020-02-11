@@ -7,7 +7,6 @@ const path = require('path');
 var sess;
 app.set('view engine','ejs');
 
-//comment
 
 // comment
 app.use(express.static(__dirname + '/public'));
